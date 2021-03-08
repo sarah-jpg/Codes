@@ -138,7 +138,7 @@ All objects have a state(Fields-usually hidden) and behavior(Methods)
 
 ## Language basics
 
-### Variables(?)
+### Variables
 
 - #### Instance variables(non-static)
 
@@ -192,8 +192,6 @@ float double
 boolean
 
 char
-
-
 
 ## Object Data Types
 
@@ -265,6 +263,8 @@ class BreakDemo {
 
 ### labeled
 
+如果不加loop1 只是跳出当前循环继续外圈循环 加了loop1之后就可以跳出大循环
+
 ```java
 class LabelledLoop{
     public static void main(String args[]){
@@ -306,13 +306,26 @@ Can use subString Method
 
 <img src="C:\Users\HP\AppData\Local\Temp\WeChat Files\20bdc7c2effcad46c9df30a1befdea5.png" alt="20bdc7c2effcad46c9df30a1befdea5" style="zoom:50%;" />
 
+（？）
+
 ## Passing Arguments to Methods
 
+Primitives and references both passed by value using call-by-value 
 
+- If the copied argument is primitive then changes made do not effect the original argument
+- If the copied argument is a reference type then changes made do effect the object, because the reference to the object is copied
+
+In Java objects are always 'passed by reference', they can never be 'passed by value'.
+
+In Java we always use references to address objects（？)
 
 ## Method overloading
 
 use the same name
+
+
+
+Constructor overloading 
 
 
 
@@ -321,3 +334,31 @@ use the same name
 
 
 ## Static variables
+
+## Inner classes
+
+
+
+## Question
+
+1. p8 Static keyword – Only one copy of this
+
+instance在memory space里面的位置是调用一次多增加一个位置， 而static始终一个位置，比如一个车子有四个轮子就应该用static，因为是固定的，不仅可以减少内存还可以保护代码
+
+1. p12 Keywords are member dependent 
+
+记住例子
+
+1. p33 protected？p35 的package subclass world
+
+同一类对其他类的保护
+
+1. p36 
+
+variable传递是复制值/object传递还有继续指向这个物体的
+
+this有点像java的指针
+
+1. pass value/referencnes 用this？
+
+理解这个eg<img src="C:\Users\HP\AppData\Local\Temp\WeChat Files\3a693f8b82436eafad01806200a0f40.png" alt="3a693f8b82436eafad01806200a0f40" style="zoom:50%;" />
