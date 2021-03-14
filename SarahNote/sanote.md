@@ -147,6 +147,10 @@ CPU Time =  Instruction Count * CPI * Clock Cycle Time
 
 
 
+## 
+
+
+
 ## Understanding Program Performance
 
 - Algorithm
@@ -177,6 +181,49 @@ CPU Time =  Instruction Count * CPI * Clock Cycle Time
 The performance enhancement possible with a given improvement is limited by the amount that the improved feature is used
 
 <img src="C:\Users\HP\AppData\Local\Temp\WeChat Files\a9389cb37efd0386027c7ad11ec39f9.png" alt="a9389cb37efd0386027c7ad11ec39f9" style="zoom:50%;" />
+
+## Review
+
+## 概念
+
+### Relative performance = 1/Execution time  
+
+Execution time = response time 计算机完成一个task的总时间(由其中instruction数量决定)
+
+Throughput = bandwidth 一定时间内完成的task数量
+
+Execution time 和 Throughput 被processor 影响（快一点的processor/多一些processor）
+
+### Measuring performance 
+
+Response time (同上， 包括disk access/memory access/ I/O activities)
+
+CPU execution time (CPU time) 完成一个task的CPU花的时间(不包括I/O)(可以分成user CPU time， system CPU time)
+
+
+
+Clock cycle(Clock tick) 一个clock period的时间 (通常是processor clock，是一个常量) ps ns
+
+Clock frequency(Clock rate) 一定时间段的圈数 = 1/clock period GHz MHz
+
+### Instruction Performance
+
+CPI(Clock cycles per instruction) 由CPU hardware决定
+
+Instruction count 由program ISA和compiler决定
+
+
+
+### Program Performance
+
+## 公式
+
+CPU Time = CPU Clock Cycles * Clock Cycle Time 
+                   = CPU Clock Cycles / Clock Rate
+
+CPU Clock Cycles = Instruction Count * Cycles per Instruction (CPI)
+
+CPU Time =  Instruction Count * CPI * Clock Cycle Time = Instruction Count * CPI/Clock Rate
 
 
 
@@ -238,7 +285,40 @@ Write back
 
 ### ADD IMMEDIATE
 
+## Caller-saved Registers vs. Callee-saved Registers
 
+
+
+Caller-saved Registers： $t0 - $t9  不保留 储存临时值
+
+Callee-saved Registers： $s0 - $s7 保留 储存long-lived values
+
+## System Call
+
+
+
+## MIPS Branching
+
+• beq a, b, l  goto instruction at label l if a==b,
+
+• bne a, b, l goto instruction at label l if a!=b, otherwise, continue with the next  instruction
+
+• j l – Jump to
+
+
+
+### while 
+
+```MIPS
+
+loop: beq $s0,$zero,wexit #goto exit if i==0
+	  addi $s0,$s0,-1 # i=i-1
+      addi $s1,$s1,3 # j=j+3
+      j loop # goto loop
+wexit: … … # execution continues here
+```
+
+slt a,b,c      a有啥用
 
 
 

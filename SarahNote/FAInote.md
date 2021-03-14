@@ -90,3 +90,63 @@ Tree size
 
 The size of the search tree
 
+
+
+# Lecture 3
+
+complete search
+
+
+
+good solution
+
+- path cost(?)
+- search post(time and memory)
+
+## Evaluation criteria
+
+- completeness
+- time complexity
+- space complexity
+- optimality
+
+## Time and space complexity
+
+- branch
+- depth
+- maximum depth
+
+## BLIND SEARCHES
+
+"Expand"
+
+"Test"
+
+### GENERAL TREE SEARCH
+
+
+
+### BREADTH FIRST SEARCH (BFS)
+
+
+
+- completeness-yes
+- time complexity
+- space complexity
+- optimality-yes
+
+
+
+### DEPTH FIRST SEARCH
+
+- completeness-yes
+- time complexity
+- space complexity
+- optimality-yes
+
+
+
+### UNIFORM COST SEARCH
+
+sort
+
