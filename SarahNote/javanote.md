@@ -362,3 +362,102 @@ this有点像java的指针
 1. pass value/referencnes 用this？
 
 理解这个eg<img src="C:\Users\HP\AppData\Local\Temp\WeChat Files\3a693f8b82436eafad01806200a0f40.png" alt="3a693f8b82436eafad01806200a0f40" style="zoom:50%;" />
+
+
+
+
+
+
+
+# Lecture 5
+
+
+
+## Pass by reference and pass by value
+
+当把一个值pass 是复制的值
+
+当把一个object pass 是pass的通道
+
+## Constructors vs methods
+
+|   | Constructors     | methods     |
+| ---- | ---- | ---- |
+|      |initialize objects when they are created      |perform operations on objects that already exist      |
+|      | called implicitly when the new keyword creates an object     |      |
+|      | are called implicitly when the new keyword creates an object      | can be called directly on an existing object     |
+| |must be named with the same name as the class name| must be called something different to the class name|
+||can't return anything |must be configured return something, although it can be void|
+
+## Static keyword 
+
+Static methods can’t use the this keyword as there is no instance for  this to refer to(?)
+
+
+
+## Inheritance
+
+superclass - > subclass
+
+Subclass inherits all the variables and methods of the superclass
+
+Subclasses code can change the ‘intention’ of the superclass code
+
+
+
+class Superclass {…..} 
+
+class Subclass extends Superclass { .....}
+
+
+
+### Every class is a subclass of Java’s Object class 
+
+Each superclass can have many subclasses but in Java (as opposed to  C++) each class can have at most one superclass.
+
+
+
+A subclass cannot access the private members of its superclass.
+
+## Overriding
+
+A method declared final or static cannot be overridden. 
+
+Constructors cannot be overridden
+
+
+
+
+
+
+
+# Lecture 6
+
+Good programmers will always use the @Override annotation when  overriding
+
+## Inner class
+
+Methods in the outer class can instantiate the inner class(?)
+
+```java
+class Outer { 
+    class Inner { 
+    } 
+}
+```
+
+### Static Inner Class
+
+### Non-static inner Class
+
+- #### Inner class
+
+- #### Method local inner class
+
+- #### Anonymous inner class
+
+
+
+## Abstract
+
+Any subclass of this class must contain implementations for all of the  abstract methods in its superclass class..(?)

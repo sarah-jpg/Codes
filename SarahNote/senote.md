@@ -212,19 +212,71 @@ enternal (then)
 
 
 
+# Lecture 7
 
 
 
+## Specifications
+
+functional / non-functional (constraints)
+
+user requirements and system specifications 
+
+## What Specifications Are Like
+
+- ### Natural language sentences
+
+Distinguish between mandatory (‘shall’) and desirable (‘should’)
+
+- ### Stuctured natural language
+
+eg. templates
+
+- ### Graphical notations
+
+eg. diagrams
+
+- ### Mathmatical specifications
 
 
 
+## Good Specification
+
+3C principles  Clear/Consistent/Concise
+
+### Testability
+
+### Prototypes
+
+• The graphical specifications – UML models (also scenarios etc from User Requirements). 
+
+• The textual specifications –in the System Requirements Specifications).
 
 
 
+# Lecture 8
 
+## What are Prototypes
 
+## Low vs High Fidelity(保真)
 
+both throw away 
 
+low - improve idea
+
+high - to agree on the final designs
+
+## What Are You Prototyping
+
+3 Types of Prototype
+
+- role of technology
+- look and feel
+- implementation guide
+
+## Risks
+
+## Prototyping Tools
 
 
 

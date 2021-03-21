@@ -318,7 +318,73 @@ loop: beq $s0,$zero,wexit #goto exit if i==0
 wexit: … … # execution continues here
 ```
 
-slt a,b,c      a有啥用
+slt a,b,c     
 
 
+
+
+
+## Logical Operations
+
+一位一位计算
+
+and vs andi（常数转换成二进制逐位and）没有nori
+
+
+
+
+
+## Question
+
+p17 一个是main一个是自己写的函数/一个是global一个是local
+
+p24 system call 告诉你在做哪一步？（差不多）
+
+p26 example 先自己看看 p36
+
+p44 andi 常数的逐位求and
+
+# Lecture 5
+
+## Representing Negative Numbers
+
+0 ⇒ +, 1 ⇒ –
+
+1111111 ->  127/-0
+
+-x = 2^N - x
+
+### Signed Extension
+
+
+
+## Overflow
+
+when the last carry (1)  cannot be accommodated
+
+p12 表什么意思
+
+## Shift Operations
+
+sll $s0,$s1,2   -> $s0 = $s1 << 2
+
+srl $s0,$s1,3 -> $s0 = $s1 >> 3
+
+sra $s0,$s1,2    除以2
+
+## MIPS multiplication
+
+Hi and Lo
+
+mult $s1,$s2
+
+mflo $s0
+
+mul $s0,$s1,$s2 
+
+## MIPS division
+
+div $s1,$s2
+
+mflo $s0
 

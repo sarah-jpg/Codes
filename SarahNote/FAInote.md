@@ -105,9 +105,15 @@ good solution
 
 ## Evaluation criteria
 
-- completeness
+- completeness 如果找到了返回，没有找到所有遍历一遍
 - time complexity
+
+total number of nodes in the tree
+
 - space complexity
+
+number of leaves
+
 - optimality
 
 ## Time and space complexity
@@ -122,31 +128,25 @@ good solution
 
 "Test"
 
+（写一下queue里面的改变方法）
+
+## Comparation
+
+
+
+|      | BREADTH FIRST SEARCH (BFS)| DEPTH FIRST SEARCH|UNIFORM COST SEARCH|
+| ---- | ---- | ---- |----|
+|completeness|yes  |no      |   |
+|time complexity| O(b^d) | O(b^m) |   |
+|space complexity| O(b^d) | O(bm) |   |
+|optimality| yes | no |   |
+
+
+
 ### GENERAL TREE SEARCH
 
 
 
-### BREADTH FIRST SEARCH (BFS)
-
-
-
-- completeness-yes
-- time complexity
-- space complexity
-- optimality-yes
-
-
-
-### DEPTH FIRST SEARCH
-
-- completeness-yes
-- time complexity
-- space complexity
-- optimality-yes
-
-
-
-### UNIFORM COST SEARCH
 
 sort
 
