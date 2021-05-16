@@ -125,3 +125,100 @@ zip :: [a] -> [b] -> [(a,b)]
 id :: a->a
 
 (?)
+
+
+
+
+
+# Lecture 4
+
+## Conditional Expressions
+
+```haskell
+abs :: Int -> Int
+abs n = if n >= 0 then n else -n
+```
+
+一定要有一个else branch
+
+### Guarded Equations
+
+```haskell
+abs n | n >= 0    = n
+      | otherwise = -n
+```
+
+
+
+## Pattern Matching 
+
+```haskell
+not :: Bool -> Bool
+not False = True
+not True = False
+```
+
+_ 的意思是 matches any argument value 
+
+### List Patterns 
+
+[1,2,3,4]  = 1:(2:(3:4:[]))
+
+```haskell
+head :: [a] -> a 
+head (x:_) = x 
+tail :: [a] -> [a] 
+tail (_:xs) = xs 
+```
+
+
+
+head tail作用于非空集合
+
+## Lambda Expressions
+
+λx → x + x  用λ可以不用写函数名
+
+Why Are Lambda's Useful? （？）
+
+
+
+## Operator Sections
+
+reciprocation function(?)
+
+1+2   = (+) 1 2
+
+
+
+haskell 的 overloading？多态？
+
+
+
+(Eq a, Num a) => (a,a) -> Bool  前面的限制？
+
+
+
+# Lecture 5
+
+## Set Comprehensions
+
+## Lists Comprehensions 
+
+```haskell
+[x^2 | x <- [1..5]]
+```
+
+```haskell
+[(x,y) | y <- [4,5], x <- [1,2,3]]
+[(1,4), (2,4), (3,4), (1,5), (2,5), (3,5s)]
+```
+
+## Dependant Generators
+
+```haskell
+concat :: [[a]] -> [a]
+concat xss = [x | xs <- xss, x <- xs]
+```
+
+(?)

@@ -388,3 +388,153 @@ div $s1,$s2
 
 mflo $s0
 
+
+
+
+
+# Lecture 6
+
+
+
+## MIPS Instruction Encoding
+
+### R
+
+|op      |  rs    |  rt    | rd|shamt|funct|
+| ---- | ---- | ---- |
+|   6 bits   |   5 bits   |   5 bits   |5 bits |5 bits| 6 bits|
+
+
+32bits 4位转换成一个八进制 
+
+000000 10001 10010 10000 00000 100010 -》 02328022
+
+### I
+
+| op     | rs     |   rd   | imm |
+| ---- | ---- | ---- |
+| 6 bits     |  5 bits    |  5 bits    | 16 bits|
+
+
+
+### J
+
+|op      |   imm   |
+| ---- | ---- |
+| 6 bits     | 26 bits     |
+
+## Registers vs Memory
+
+### Load Word 
+
+transfer data from memory to register
+
+lw a, n(b)    ps: a = Memory[b+n]  
+
+n - offset
+
+### Store Word
+
+transfer data from register to memory
+
+sw a, n(b)  ps: Memory[b+n] = a
+
+
+
+## Transferring Bytes and Halfwords
+
+lb/lbu load byte (signed/unsigned)
+
+lh/lhu load halfword (signed/unsigned)
+
+sb store byte
+
+sh store halfword
+
+
+
+## Loading a 32-bit Constant
+
+lui $s0,imm - 前16位load进去 imm 2进制转化为10进制算
+
+ori $s0,$s0,4307 - 后16位load进去
+
+
+
+
+
+
+
+## stack
+
+- local variables
+- temporary variables
+- argument
+- return the address when functions ends
+
+```mips
+li $a0,16 #申请16个bytes
+li $v0,9  #system call
+syscall # sbrk
+```
+
+Q： beq属于哪一种 I-format 不用rd？
+
+# Lecture 7
+
+## Procedures
+
+
+
+
+
+# Lecture 8
+
+## Scientific Notation
+
+m * b^e
+
+m - significand
+
+b - base number 
+
+
+
+eg. 10111(2) = 10.111 * 2^3
+
+### Normalized Scientific Notation
+
+1 ≤ |m| < 10
+
+Binary: General form: +- 1.xxx * 2^(yyy)
+
+.  - Binary point / xxx - Fraction / 2 - Base/ yyyy - exponent
+
+
+
+## Floating Point Standard
+
+见ppt
+
+
+
+## From Binary Floating Point to Decimal
+
+小数位用2的-1/-2/-3次方
+
+## Equality Conditions
+
+
+
+# Digital Blocks  and ALU Design
+
+
+
+# MIPS  Instructions
+
+
+
+
+
+
+

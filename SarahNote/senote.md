@@ -292,3 +292,168 @@ use case里面who and what 没有关系和step
 
 可以写为什么不选这个
 
+
+
+
+
+# Lecture 9
+
+Component Design
+
+Interface Design eg. between component 
+
+Architecture Design
+
+Database Design
+
+
+
+## Class Description Documents
+
+
+
+## Test Plans
+
+Development Test Plans
+
+System/Integration Test Plans
+
+Accptance Test Plans
+
+
+
+- Requiremets Traceability
+- Constranits
+
+### Test case
+
+
+
+### Types
+
+Validation Testing 是否出现正确值
+
+Defect Testing 出错了怎么办
+
+
+
+# Lecture 10
+
+## Social Dev Perspectives
+
+## Coding Conventions
+
+## Strategies for Approaching Code
+
+### Test-Driven Development
+
+### Comment-Driven Development
+
+
+
+
+
+# Lecture 11
+
+
+
+## 
+
+White Box Testing 
+
+Black Box Testing
+
+Automated Testing 
+
+Manual Testing
+
+
+
+## Test-Driven Development
+
+Red
+
+Green
+
+Refactor
+
+## Demo – TDD With Bear Hand
+
+## Good Tests 
+
+Line Coverage
+
+Function Coverage
+
+Condition Coverage
+
+Path Coverage
+
+Entry/Exit coverage
+
+# Lecture 12
+
+## Subsystem Integration Test
+
+## Release Testing Strategies
+
+
+
+Requirement Driven Strategy
+
+Scenario Driven Strategy
+
+## Acceptance Testing
+
+customer
+
+
+
+# Lecture 13
+
+## Configuration Management
+
+### Version Control
+
+Branches for maintenance/ features/team
+
+### Continuous Integration
+
+### Build Configurations
+
+Automatic Deployment
+
+
+
+# Lecture 14
+
+## Maintenance 
+
+correcting
+
+improving
+
+enhancing
+
+
+
+change is inevitable/expensive
+
+
+
+## change management
+
+fault repairs
+
+environmental adaption
+
+functionality addition
+
+
+
+### refactoring
+
+
+
+
+

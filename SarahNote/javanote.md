@@ -448,16 +448,286 @@ class Outer {
 
 ### Static Inner Class
 
+只可以调用外部static相关联的信息
+
+外部类使用时，直接类名.信息
+
 ### Non-static inner Class
 
-- #### Inner class
+- #### Inner class（成员内部类）
 
-- #### Method local inner class
+可以调用外部所有信息
+
+使用时要先new外部类
+
+- #### Method local inner class（方法内部类）
+
+仅存在于方法之中
 
 - #### Anonymous inner class
+
+定义的同时初始化
+
+```java
+Dog dog = new Dog(){
+    public void someDog(){
+        ...
+    }
+    
+};
+dog.someDog();
+```
 
 
 
 ## Abstract
 
 Any subclass of this class must contain implementations for all of the  abstract methods in its superclass class..(?)
+
+
+
+is_a    用于继承  
+
+has_a   是组合  一个类中包含了其他类
+
+# Lecture 7
+
+## Abstraction -> Interfaces
+
+interface是一个纯抽象类（只有static和final变量）
+
+### default
+
+interface里面不能define方法但可以declare 如果要define 只能用default关键字
+
+
+
+class extends class
+
+class implements interface
+
+interface extends interface
+
+
+
+interface可以实现多重继承-一个子类有多个父类
+
+
+
+## SOLID
+
+准则
+
+# Lecture 8
+
+## Getters and Setters
+
+设置get和set函数return和赋值 便于外部修改
+
+## Abstract Classes and Interfaces
+
+Abstract classes 0-100% abstraction
+
+Interfaces 100% abstraction
+
+## Super
+
+super.color    instance variable
+
+super. printMethod()  methods
+
+super()  constructors  上一级要有constructor要不会报错
+
+
+
+## Packages
+
+package pkgname;
+
+```java
+import pkg.MyClass
+```
+
+packages and member access
+
+
+
+### static import
+
+比如 "Math.sqrt( ) 用了static之后就只用写 sqrt( )
+
+## Types of polymorphism
+
+Method overloading
+
+Generics in Java
+
+Subclass Polymorphism
+
+
+
+### Generics
+
+范型 eg. @Override
+
+## Java ArrayList
+
+这是一个类
+
+java.util.AbstractList<E>   < >   里面的东西限制list类型
+
+E – Element (used extensively by Collections, for example ArrayList) 
+
+K, V – Key, Value (Used in Map) 
+
+N – Number 
+
+T – Type
+
+## Time causes problems
+
+java.time package
+
+# Quiz
+
+1. java的一个子类只能有一个父类（但能实现多个接口）， 一个父类可以有多个子类
+2. class的根父类是 Object
+3. java关键字 他们用来表示一种数据类型，或者表示程序的结构
+4. java原始数据类型有short、byte、int、long、boolean、char、float、double
+5. 有一种class不能被作为private ： outer（复习）
+6. enhanced loops： easier array access
+
+
+
+# Exception Handling
+
+try-catch 的好处 （自己处理异常）
+
+continue/meaningful error reporting
+
+
+
+## Exception vs error 
+
+error基本上是不可修复的
+
+
+
+## Checked vs Unchecked exceptions
+
+Checked 使用try-catch eg. FileNotfound Exception
+
+Unchecked 自己能发现的 - logic error 运行过程中的问题（包括error）
+
+
+
+## Throw（交给调用者处理）
+
+用throw定义exception(checked/unchecked都可以用)
+
+```java
+public void setRadius (double newRadius) {
+    if(new<5)
+        throws IllegalArgumentException("No!");
+}
+```
+
+### Throwing Exception
+
+```java
+public void setRadius (double newRadius) {
+    throws IllegalArgumentException{
+        if(...)
+            ..
+        else
+            throw new IllegalArgumentException("..");
+    }
+}
+```
+
+这样写
+
+```java
+void p1(){
+    try{
+        p2();
+    }
+    catch(IOException ex){
+        ...
+    }
+}
+
+void p1() throws IOException{
+    p2();
+}
+```
+
+### Rethrowing 
+
+```java
+try{
+    statements;
+}
+catch(TheException ex){
+    perform operations before exits;
+    throw ex;
+}
+```
+
+
+
+### finally 
+
+```java
+try{
+    statements;
+}
+catch(TheException ex){
+    handling ex;
+}
+finally{
+    finalStatements;
+}
+```
+
+### throw vs throws
+
+throw 是语句抛出一个异常
+
+throw (异常对象);
+
+throws是方法可能抛出异常的声明
+
+public void doA(int a) throws Exception1,Exception3{......}
+
+
+
+
+
+## Reading files
+
+BufferedReader
+
+```java
+FileReader file = new FileReader(Stirng file);
+BufferedReader buffer = new BufferedReader(file);
+```
+
+
+
+FileInputStream
+
+File
+
+Scanner
+
+RandomAccessFile
+
+FileReader
+
+```java
+import java.io.FileReader;
+String fileName = "FRtest.txt";
+FileReader input = new FileReader(fileName);
+```
+

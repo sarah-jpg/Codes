@@ -139,7 +139,7 @@ number of leaves
 |completeness|yes  |no      |   |
 |time complexity| O(b^d) | O(b^m) |   |
 |space complexity| O(b^d) | O(bm) |   |
-|optimality| yes | no |   |
+|optimality| yes | no | yes |
 
 
 
@@ -150,3 +150,78 @@ number of leaves
 
 sort
 
+
+
+# Lecture 6
+
+1. component
+2. prior knowlege
+3. representation of knowledge
+4. feedback/output/label
+
+Date -> ML -> Model
+
+
+
+## process of ML
+
+data set 分为 Training set and Test set
+
+- random
+- k-fold cross validation
+
+dataset中有 categorical = discrete / continuous = numerical
+
+
+
+### SUPERVISED LEARNING
+
+#### classigication(discrete)
+
+#### regression(continuous)
+
+
+
+### UNSUPERVISED LEARNING
+
+没有label
+
+#### Clustering（discrete)
+
+#### Dimensional Reduction(continuous)
+
+
+
+## Data mining 
+
+### Task
+
+Predictive
+
+Desciptive
+
+
+
+#### Classification 
+
+regression
+
+decision tree
+
+neural networks
+
+#### CLUSTERING
+
+Partitioning-based clustering
+
+Density-based clustering
+
+
+
+# Lecture 7
+
+## Neural networks
+
+weight on a path positive - excitatory
+
+negative - inhibitory
